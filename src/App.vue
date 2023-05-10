@@ -62,19 +62,19 @@ export default {
     },
     sortByPopularity() {
       if (this.sortOrder === "asc") {
-        this.contacts.sort((a, b) => a.popularity - b.popularity);
+        this.contacts.sort((popA, popB) => popA.popularity - popB.popularity);
         this.sortOrder = "desc";
       } else {
-        this.contacts.sort((a, b) => b.popularity - a.popularity);
+        this.contacts.sort((popA, popB) => popB.popularity - popA.popularity);
         this.sortOrder = "asc";
       }
     },
     sortByName() {
       if (this.sortOrder === "asc") {
-        this.contacts.sort((a, b) => a.name.localeCompare(b.name));
+        this.contacts.sort((nameA, nameB) => nameA.name.localeCompare(nameB.name));
         this.sortOrder = "desc";
       } else {
-        this.contacts.sort((a, b) => b.name.localeCompare(a.name));
+        this.contacts.sort((nameA, nameB) => nameB.name.localeCompare(nameA.name));
         this.sortOrder = "asc";
       }
     },
